@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="{{ selectedManufaturer == 'FERRARI'? 'active' : '' }}">
+        <a (click)="onClick_Manufaturer('FERRARI')">Ferrari</a>
+      </li>
+      <li role="presentation" class="{{ selectedManufaturer == 'MERCEDES'? 'active' : '' }}">
+        <a (click)="onClick_Manufaturer('MERCEDES')">Mercedes</a>
+      </li>
+      <li role="presentation" class="{{ selectedManufaturer == 'REDBULLRACINGTAGHEUER'? 'active' : '' }}">
+        <a (click)="onClick_Manufaturer('REDBULLRACINGTAGHEUER')">Red Bull Racing Tag Heuer</a>
+      </li>
+    </ul>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Driver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of results">
+          <td>{{ item }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
