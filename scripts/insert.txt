@@ -1,0 +1,94 @@
+PREFIX ex: <http://example.com/>
+
+-- Manufacturers
+INSERT { <ex:manufacturer/MERCEDES> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/MERCEDES> ex:title "Mercedes" } WHERE {};
+
+INSERT { <ex:manufacturer/FERRARI> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/FERRARI> ex:title "Ferrari" } WHERE {};
+
+INSERT { <ex:manufacturer/REDBULLRACINGTAGHEUER> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/REDBULLRACINGTAGHEUER> ex:title  "Red Bull Racing Tag Heuer" } WHERE {};
+
+INSERT { <ex:manufacturer/RENAULT> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/RENAULT> ex:title  "Renault" } WHERE {};
+
+INSERT { <ex:manufacturer/FORCEINDIAMERCEDES> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/FORCEINDIAMERCEDES> ex:title  "Force India Mercedes" } WHERE {};
+
+INSERT { <ex:manufacturer/WILLIAMSMERCEDES> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/WILLIAMSMERCEDES> ex:title  "Williams Mercedes" } WHERE {};
+
+INSERT { <ex:manufacturer/HAASFERRARI> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/HAASFERRARI> ex:title  "Haas Ferrari" } WHERE {};
+
+INSERT { <ex:manufacturer/MCLARENHONDA> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/MCLARENHONDA> ex:title  "MClaren Honda" } WHERE {};
+
+INSERT { <ex:manufacturer/SAUBERFERRARI> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/SAUBERFERRARI> ex:title  "Sauber Ferrari" } WHERE {};
+
+INSERT { <ex:manufacturer/TOROROSSO> ex:type <ex:manufacturer> } WHERE {};
+INSERT { <ex:manufacturer/TOROROSSO> ex:title  "Toro Rosso" } WHERE {};
+
+-- Drivers
+
+INSERT { <ex:driver/SebastianVettel> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/SebastianVettel> ex:title  "Sebastian Vettel" } WHERE {};
+INSERT { <ex:driver/SebastianVettel> ex:drives  <ex:manufacturer/MERCEDES> } WHERE {};
+
+INSERT { <ex:driver/LewisHamilton> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/LewisHamilton> ex:title  "Lewis Hamilton" } WHERE {};
+INSERT { <ex:driver/LewisHamilton> ex:drives  <ex:manufacturer/FERRARI> } WHERE {};
+
+INSERT { <ex:driver/ValtteriBottas> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/ValtteriBottas> ex:title  "Valtteri Bottas" } WHERE {};
+INSERT { <ex:driver/ValtteriBottas> ex:drives  <ex:manufacturer/MERCEDES> } WHERE {};
+
+INSERT { <ex:driver/DanielRicciardo> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/DanielRicciardo> ex:title  "Daniel Ricciardo" } WHERE {};
+INSERT { <ex:driver/DanielRicciardo> ex:drives  <ex:manufacturer/REDBULLRACINGTAGHEUER> } WHERE {};
+
+INSERT { <ex:driver/MaxVerstappen> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/MaxVerstappen> ex:title  "Max Verstappen" } WHERE {};
+INSERT { <ex:driver/MaxVerstappen> ex:drives  <ex:manufacturer/REDBULLRACINGTAGHEUER> } WHERE {};
+
+INSERT { <ex:driver/KimiRaikkonen> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/KimiRaikkonen> ex:title  "Kimi Räikkönen" } WHERE {};
+INSERT { <ex:driver/KimiRaikkonen> ex:drives  <ex:manufacturer/FERRARI> } WHERE {};
+
+INSERT { <ex:driver/SergioPerez> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/SergioPerez> ex:title  "Sergio Perez" } WHERE {};
+INSERT { <ex:driver/SergioPerez> ex:drives  <ex:manufacturer/FORCEINDIAMERCEDES> } WHERE {};
+
+INSERT { <ex:driver/EstebanOcon> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/EstebanOcon> ex:title  "Esteban Ocon" } WHERE {};
+INSERT { <ex:driver/EstebanOcon> ex:drives  <ex:manufacturer/FORCEINDIAMERCEDES> } WHERE {};
+
+INSERT { <ex:driver/CarlosSainz> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/CarlosSainz> ex:title  "Carlos Sainz" } WHERE {};
+INSERT { <ex:driver/CarlosSainz> ex:drives  <ex:manufacturer/RENAULT> } WHERE {};
+
+INSERT { <ex:driver/NicoHulkenberg> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/NicoHulkenberg> ex:title  "Nico Hulkenberg" } WHERE {};
+INSERT { <ex:driver/NicoHulkenberg> ex:drives  <ex:manufacturer/RENAULT> } WHERE {};
+
+INSERT { <ex:driver/FelipeMassa> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/FelipeMassa> ex:title  "Felipe Massa" } WHERE {};
+INSERT { <ex:driver/FelipeMassa> ex:drives  <ex:manufacturer/WILLIAMSMERCEDES> } WHERE {};
+
+INSERT { <ex:driver/LanceStroll> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/LanceStroll> ex:title  "Lance Stroll" } WHERE {};
+INSERT { <ex:driver/LanceStroll> ex:drives  <ex:manufacturer/WILLIAMSMERCEDES> } WHERE {};
+
+INSERT { <ex:driver/RomainGrosjean> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/RomainGrosjean> ex:title  "Romain Grosjean" } WHERE {};
+INSERT { <ex:driver/RomainGrosjean> ex:drives  <ex:manufacturer/HAASFERRARI> } WHERE {};
+
+INSERT { <ex:driver/KevinMagnussen> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/KevinMagnussen> ex:title  "Kevin Magnussen" } WHERE {};
+INSERT { <ex:driver/KevinMagnussen> ex:drives  <ex:manufacturer/HAASFERRARI> } WHERE {};
+
+INSERT { <ex:driver/FernandoAlonso> ex:type  <ex:driver> } WHERE {};
+INSERT { <ex:driver/FernandoAlonso> ex:title  "Fernando Alonso" } WHERE {};
+INSERT { <ex:driver/FernandoAlonso> ex:drives  <ex:manufacturer/MCLARENHONDA> } WHERE {};

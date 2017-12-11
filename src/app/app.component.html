@@ -1,14 +1,8 @@
 <div class="container">
   <div class="row">
     <ul class="nav nav-tabs">
-      <li role="presentation" class="{{ selectedManufaturer == 'FERRARI'? 'active' : '' }}">
-        <a (click)="onClick_Manufaturer('FERRARI')">Ferrari</a>
-      </li>
-      <li role="presentation" class="{{ selectedManufaturer == 'MERCEDES'? 'active' : '' }}">
-        <a (click)="onClick_Manufaturer('MERCEDES')">Mercedes</a>
-      </li>
-      <li role="presentation" class="{{ selectedManufaturer == 'REDBULLRACINGTAGHEUER'? 'active' : '' }}">
-        <a (click)="onClick_Manufaturer('REDBULLRACINGTAGHEUER')">Red Bull Racing Tag Heuer</a>
+      <li *ngFor="let manufacturer of manufacturers" role="presentation" class="{{ selectedManufaturer == manufacturer.id? 'active' : '' }}">
+        <a (click)="onClick_Manufaturer(manufacturer.id)">{{ manufacturer.title }}</a>
       </li>
     </ul>
     <table class="table table-striped">

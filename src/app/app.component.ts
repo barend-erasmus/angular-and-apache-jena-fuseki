@@ -13,7 +13,9 @@ export class AppComponent {
 
   private baseUri: string = 'http://192.168.46.189:3030';
 
-  public selectedManufaturer: string = 'MERCEDES';
+  public selectedManufaturer: string = 'ex:manufacturer/FERRARI';
+
+  public manufacturers: any[] = [];
 
   public results: any[];
 
@@ -22,34 +24,65 @@ export class AppComponent {
   }
 
   public ngOnInit(): void {
+    this.loadManufacturers();
     this.onClick_Manufaturer(this.selectedManufaturer);
   }
 
-  public onClick_Manufaturer(manufaturer): void {
+  public onClick_Manufaturer(manufaturer: string): void {
     this.selectedManufaturer = manufaturer;
 
+    this.loadDrivers();
+  }
+
+  private loadManufacturers(): void {
     this.post(`/formula-1/sparql`, `
-          SELECT ?s
-          WHERE
-          {
-            ?s <http://example.com/drives> <ex:manufacturer/${this.selectedManufaturer}> .
-          }
-      `).map((r) => r.json()).subscribe((json1) => {
+    SELECT ?s
+    WHERE
+    {
+      ?s <http://example.com/type> <ex:manufacturer> .
+    }`).map((r) => r.json()).subscribe((json) => {
+        this.loadManufacturerTitles(json.results.bindings.map((x) => x.s.value));
+      });
+  }
 
-        ///
+  private loadManufacturerTitles(manufacturerUris: string[]): void {
+    this.post(`/formula-1/sparql`, `
+    SELECT ?s ?o
+    WHERE
+    {
+      ?s <http://example.com/title> ?o .
+      FILTER (?s IN (${manufacturerUris.map((x) => `<${x}>`).join(', ')}))
+    }`).map((r) => r.json()).subscribe((json) => {
+        this.manufacturers = json.results.bindings.map((x) => {
+          return {
+            id: x.s.value,
+            title: x.o.value,
+          };
+        });
+      });
+  }
 
-        this.post(`/formula-1/sparql`, `
-          SELECT ?o
-          WHERE
-          {
-            ?s <http://example.com/title> ?o .
-            FILTER (?s IN (${json1.results.bindings.map((x) => `<${x.s.value}>`).join(', ')}))
-          }
-        `).map((r) => r.json()).subscribe((json2) => {
-            this.results = json2.results.bindings.map((x) => x.o.value);
-          });
+  private loadDrivers(): void {
+    this.post(`/formula-1/sparql`, `
+    SELECT ?s
+    WHERE
+    {
+      ?s <http://example.com/drives> <${this.selectedManufaturer}> .
+    }`).map((r) => r.json()).subscribe((json) => {
+        this.loadDriverTitles(json.results.bindings.map((x) => x.s.value));
+      });
+  }
 
-        ///
+  private loadDriverTitles(driverUris: string[]): void {
+
+    this.post(`/formula-1/sparql`, `
+    SELECT ?o
+    WHERE
+    {
+      ?s <http://example.com/title> ?o .
+      FILTER (?s IN (${driverUris.map((x) => `<${x}>`).join(', ')}))
+    }`).map((r) => r.json()).subscribe((json) => {
+        this.results = json.results.bindings.map((x) => x.o.value);
       });
   }
 
