@@ -1,0 +1,114 @@
+<ex:manufacturer/FERRARI>
+        <http://example.com/title>  "Ferrari" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:driver/FelipeMassa>
+        <http://example.com/drives>  <ex:manufacturer/WILLIAMSMERCEDES> ;
+        <http://example.com/title>   "Felipe Massa" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/FernandoAlonso>
+        <http://example.com/drives>  <ex:manufacturer/MCLARENHONDA> ;
+        <http://example.com/title>   "Fernando Alonso" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/RomainGrosjean>
+        <http://example.com/drives>  <ex:manufacturer/HAASFERRARI> ;
+        <http://example.com/title>   "Romain Grosjean" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:manufacturer/FORCEINDIAMERCEDES>
+        <http://example.com/title>  "Force India Mercedes" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:driver/EstebanOcon>
+        <http://example.com/drives>  <ex:manufacturer/FORCEINDIAMERCEDES> ;
+        <http://example.com/title>   "Esteban Ocon" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/LanceStroll>
+        <http://example.com/drives>  <ex:manufacturer/WILLIAMSMERCEDES> ;
+        <http://example.com/title>   "Lance Stroll" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/KevinMagnussen>
+        <http://example.com/drives>  <ex:manufacturer/HAASFERRARI> ;
+        <http://example.com/title>   "Kevin Magnussen" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/MaxVerstappen>
+        <http://example.com/drives>  <ex:manufacturer/REDBULLRACINGTAGHEUER> ;
+        <http://example.com/title>   "Max Verstappen" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:manufacturer/MCLARENHONDA>
+        <http://example.com/title>  "MClaren Honda" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:manufacturer/TOROROSSO>
+        <http://example.com/title>  "Toro Rosso" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:driver/ValtteriBottas>
+        <http://example.com/drives>  <ex:manufacturer/MERCEDES> ;
+        <http://example.com/title>   "Valtteri Bottas" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/KimiRaikkonen>
+        <http://example.com/drives>  <ex:manufacturer/FERRARI> ;
+        <http://example.com/title>   "Kimi RÃ¤ikkÃ¶nen" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/DanielRicciardo>
+        <http://example.com/drives>  <ex:manufacturer/REDBULLRACINGTAGHEUER> ;
+        <http://example.com/title>   "Daniel Ricciardo" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/NicoHulkenberg>
+        <http://example.com/drives>  <ex:manufacturer/RENAULT> ;
+        <http://example.com/title>   "Nico Hulkenberg" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/SebastianVettel>
+        <http://example.com/drives>  <ex:manufacturer/MERCEDES> ;
+        <http://example.com/title>   "Sebastian Vettel" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/CarlosSainz>
+        <http://example.com/drives>  <ex:manufacturer/RENAULT> ;
+        <http://example.com/title>   "Carlos Sainz" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:driver/LewisHamilton>
+        <http://example.com/drives>  <ex:manufacturer/FERRARI> ;
+        <http://example.com/title>   "Lewis Hamilton" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:manufacturer/HAASFERRARI>
+        <http://example.com/title>  "Haas Ferrari" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:manufacturer/RENAULT>
+        <http://example.com/title>  "Renault" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:manufacturer/REDBULLRACINGTAGHEUER>
+        <http://example.com/title>  "Red Bull Racing Tag Heuer" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:driver/SergioPerez>
+        <http://example.com/drives>  <ex:manufacturer/FORCEINDIAMERCEDES> ;
+        <http://example.com/title>   "Sergio Perez" ;
+        <http://example.com/type>    <ex:driver> .
+
+<ex:manufacturer/SAUBERFERRARI>
+        <http://example.com/title>  "Sauber Ferrari" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:manufacturer/MERCEDES>
+        <http://example.com/title>  "Mercedes" ;
+        <http://example.com/type>   <ex:manufacturer> .
+
+<ex:manufacturer/WILLIAMSMERCEDES>
+        <http://example.com/title>  "Williams Mercedes" ;
+        <http://example.com/type>   <ex:manufacturer> .
