@@ -1,19 +1,19 @@
 <div class="container">
   <div class="row">
     <ul class="nav nav-tabs">
-      <li *ngFor="let manufacturer of manufacturers" role="presentation" class="{{ selectedManufaturer == manufacturer.id? 'active' : '' }}">
-        <a (click)="onClick_Manufaturer(manufacturer.id)">{{ manufacturer.title }}</a>
+      <li *ngFor="let manufacturer of manufacturers" role="presentation" class="{{ selectedManufacturer == manufacturer.id? 'active' : '' }}">
+        <a (click)="onClick_Manufacturer(manufacturer.id)">{{ manufacturer.title }}</a>
       </li>
     </ul>
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Driver</th>
+          <th>Drivers</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of results">
-          <td>{{ item }}</td>
+        <tr *ngFor="let driver of drivers">
+          <td>{{ driver }}</td>
         </tr>
       </tbody>
     </table>
